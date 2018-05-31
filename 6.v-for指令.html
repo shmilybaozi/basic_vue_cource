@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>v-for</title>
+  <script src="./vue/vue.js"></script>
+</head>
+
+<body>
+  <div id="root">
+    <h1> v-for 循环</h1>
+    <!-- 数组下标 -->
+    <!-- {{characters[0]}}
+    {{characters[1]}}
+    {{characters[2]}} -->
+
+    <!-- 遍历数组 -->
+    <ul>
+      <li v-for="characters in characters">{{characters}}</li>
+    </ul>
+
+    <ul>
+      <li v-for="users in users">{{users.name}}-{{users.age}}</li>
+    </ul>
+
+    <!-- 需要为每项提供一个唯一 key 属性。理想的 key 值是每项都有的且唯一的 id (:key="item.id")-->
+    <ul>
+      <li v-for="(users,index) in users" :key="index">{{index+1}}.{{users.name}}-{{users.age}}</li>
+    </ul>
+
+    <!-- 生成三个 div>h3+p 形式的元素 -->
+    <div v-for="(users,index) in users">
+      <h3>{{index}}.{{users.name}}</h3>
+      <p>Age-{{users.age}}</p>
+    </div>
+
+    <!-- v-for on a <template> -->
+    <!-- 生成三个 h3+p 形式的元素 -->
+    <template v-for="(users,index) in users">
+      <h3>{{index}}.{{users.name}}</h3>
+      <p>Age-{{users.age}}</p>
+    </template> 
+
+    <template v-for="(users,index) in users">
+      <!-- 遍历对象 -->
+      <div v-for="(val,key) in users">
+        <p>{{key}}-{{val}}</p>
+      </div>
+    </template> 
+
+  </div>
+  <script>
+    new Vue({
+      el: "#root",
+      data: {
+        characters:["tutu","panghu","happy"],
+        users:[
+          {name:"tutu",age:"2"},
+          {name:"panghu",age:"1.5"},
+          {name:"happy",age:"1"},
+        ]
+      }
+    })
+  </script>
+</body>
+
+</html>

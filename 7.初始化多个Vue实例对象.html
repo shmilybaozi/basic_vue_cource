@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>初始化多个Vue实例对象</title>
+  <script src="./vue/vue.js"></script>
+</head>
+
+<body>
+  <h1>初始化多个Vue实例对象</h1>
+  <div id="root-one">
+      <h2>{{title}}</h2>
+      <p>{{greet}}</p>
+  </div>
+
+  <div id="root-two">
+      <h2>{{title}}</h2>
+      <p>{{greet}}</p> 
+      
+      <button @click="changeTitle">change one's title</button>
+  </div>
+
+  <script>
+    let one = new Vue({
+      el: "#root-one",
+      data: {
+        title: "one的内容"
+      },
+      computed: {
+        greet () {
+          return "Hello one!"
+        }
+      },
+      methods: {
+        handleClick: function () {
+          this.content = "world"
+        }
+      },
+    })
+
+    let two = new Vue({
+      el: "#root-two",
+      data: {
+        title: "two的内容"
+      },
+      computed: {
+        greet () {
+          return "Hello two!"
+        }
+      },
+      methods: {
+        changeTitle () {
+          one.title = "略略略"
+        },
+      }
+    })
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>计算属性与侦听器</title>
+  <script src="./vue/vue.js"></script>
+</head>
+
+<body>
+  <div id="root">
+    姓：
+    <input v-model="firstName"> 名：
+    <input v-model="lastName">
+    <div>{{fullName}}</div>
+    <div>{{count}}</div>
+
+    <br><br>
+
+    <h1>computed 计算属性</h1>
+    <button @click="a++">Add to A</button>
+    <button @click="b++">Add to B</button>
+    <p>A - {{a}}</p>
+    <p>B - {{b}}</p>
+    <p>Age + A = {{addToA}}</p>
+    <p>Age + B = {{addToB}}</p>
+  </div>
+
+  <script>
+    new Vue({
+      el: "#root",
+      data: {
+        firstName: '',
+        lastName: '',
+        count: 0,
+        a:0,
+        b:0,
+        age:20
+      },
+      computed: {
+        fullName: function () {
+          return this.firstName + '' + this.lastName
+        },
+        addToA () {
+          return this.a + this.age
+        },
+        addToB () {
+          return this.b + this.age
+        }
+      },
+     /*  methods:{
+        addToA () {
+          return this.a + this.age
+        },
+        addToB () {
+          return this.b + this.age
+        }
+      }, */
+      watch: {
+        firstName: function () {
+          this.count++
+        },
+        lastName: function () {
+          this.count++
+        }
+      }
+    })
+  </script>
+</body>
+
+</html>

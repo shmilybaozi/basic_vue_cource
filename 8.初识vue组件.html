@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>初识vue组件</title>
+  <script src="./vue/vue.js"></script>
+</head>
+
+<body>
+  <h1>初识vue组件</h1>
+  <div id="root-one">
+    <greeting></greeting>
+  </div>
+
+  <div id="root-two">
+    <greeting></greeting>
+  </div>
+  <script>
+    // 全局组件
+    Vue.component("greeting",{
+      // template 中的内容要放到一个根标签中！
+      template: `<div>
+                <p>{{name}}：大家好,这是我最爱的小猫咪@图图</p>
+                <button @click="changeName">改名</button>
+                <div>`,
+      data () {
+        return {
+          name: "汤阿姨"
+        }
+      },
+      methods: {
+        changeName () {
+          this.name = "雷叔叔";
+        },
+      },
+    })
+    
+    new Vue({
+      el: "#root-one",
+    })
+
+    new Vue({
+      el: "#root-two"
+    })
+  </script>
+</body>
+
+</html>

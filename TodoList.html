@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>TodoList</title>
+  <script src="./vue/vue.js"></script>
+</head>
+
+<body>
+  <div id="root">
+    <div>
+      <input v-model="inputValue">
+      <button @click="handleClick">提交</button>
+    </div>
+    <ul>
+      <!-- <li v-for="(item,index) of list" :key="index">{{item}}</li> -->
+      <todo-item 
+        v-for="(item,index) of list" 
+        :key="index"
+        :content="item"
+        :index="index"
+        @delete="handleDelete"
+        >
+      </todo-item>
+    </ul>
+  </div>
+
+  <script>
+    /* 定义一个全局组件 */
+    // Vue.component('todo-item',{
+    //   template: '<li>item</li>'
+    // })
+
+    /* 定义一个局部组件 要通过components注册之后才能显示 */
+    var TodoItem = {
+      props: ['content', 'index'], /* 要通过props接收之后才能显示 */
+      template: '<li @click="handleClick">{{content}}</li>',
+      methods: {
+        handleClick: function () {
+          this.$emit('delete', this.index)
+        }
+      }
+    }
+
+    new Vue({
+      // el:element 需要获取的元素,一定是html中的根容器元素
+      el: "#root",
+      components: {
+        'todo-item': TodoItem
+      },
+      // 数据的存储
+      data: {
+        inputValue: '',
+        list: []
+      },
+      methods: {
+        handleClick: function () {
+          this.list.push(this.inputValue)
+          this.inputValue = ''
+        },
+        handleDelete: function (index) {
+          this.list.splice(index,1)
+        }
+      }
+    })
+  </script>
+</body>
+
+</html>
