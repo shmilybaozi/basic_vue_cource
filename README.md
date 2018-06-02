@@ -2,6 +2,9 @@
 # vue基础教程
 
 ## 目录
+
+点击:information_desk_person:回到目录
+
 - [:tada:搭建一个vue项目](#搭建一个vue项目)
 
 - [:star:分析src文件夹的逻辑关系](#分析src文件夹的逻辑关系)
@@ -29,7 +32,7 @@
 
 - [:point_right: v-for指令](#v-for指令)
 
-- [:fire: v-on](#v-on)
+- [:fire: v-on](#v-on指令)
 
 - [:two_hearts: 父组件向子组件传递数据](#父组件向子组件传递数据)
 
@@ -64,7 +67,7 @@ $ npm run dev
   - 是否使用ESLint语法校检? no
   - 是否安装测试单元“unit tests”? no
   - 是否安装测试单元“e2e tests”? no
-  - 是否安装依赖? yes [:squirrel:](#目录)
+  - 是否安装依赖? yes [:information_desk_person:](#目录)
 
 ## 分析src文件夹的逻辑关系
 
@@ -142,7 +145,7 @@ new Vue({
   </template>
   ```
 
-  [:squirrel:](#目录)
+  [:information_desk_person:](#目录)
 
 ## 处理逻辑：`<script>`详解
 
@@ -164,7 +167,7 @@ export default {
 </script>
 ```
 
-[:squirrel:](#目录)
+[:information_desk_person:](#目录)
 
 ## 属性绑定和双向数据绑定
 
@@ -223,7 +226,7 @@ export default {
   }
   ```
 
-  当需要在数据变化时执行异步或开销较大的操作时，这个方式是最有用的。[:squirrel:](#目录)
+  当需要在数据变化时执行异步或开销较大的操作时，这个方式是最有用的。[:information_desk_person:](#目录)
 
 ## v-if指令
 
@@ -280,7 +283,7 @@ export default {
 不同的是带有 `v-show` 的元素始终会被渲染并保留在 DOM 中。`v-show` 只是简单地切换元素的 CSS 属性 `display`。
 如果需要非常频繁地切换，则使用 `v-show` 较好
 
-*注意，`v-show`不支持 `<template>` 元素，也不支持 `v-else`。* [:squirrel:](#目录)
+*注意，`v-show`不支持 `<template>` 元素，也不支持 `v-else`。* [:information_desk_person:](#目录)
 
 ## v-for指令
 
@@ -352,7 +355,7 @@ export default {
   </template>
   ```
 
-  **如果在组件中使用 `v-for` 时，`key` 是必须的。** [:squirrel:](#目录)
+  **如果在组件中使用 `v-for` 时，`key` 是必须的。** [:information_desk_person:](#目录)
 
 ## v-on指令
 
@@ -473,7 +476,7 @@ export default {
   - `.left`
   - `.right`
   - `.middle`
-  - [:squirrel:](#目录)
+  - [:information_desk_person:](#目录)
 
 ## 父组件向子组件传递数据
 
@@ -510,7 +513,7 @@ export default {
 1. 传值：`string` `number` `boolean`  --->在子组件中修改该数据，仅当前组件发生修改
 2. 传引用：`array` `object`    --->在子组件中修改该数据，所有引用位置都改变
 
-根据需求来定传值还是传引用。 [:squirrel:](#目录)
+根据需求来定传值还是传引用。 [:information_desk_person:](#目录)
 
 ## 子组件向父组件传递数据
 
@@ -548,7 +551,7 @@ export default {
 </script>
 ```
 
-[:squirrel:](#目录)
+[:information_desk_person:](#目录)
 
 ## 生命周期钩子函数
 
@@ -569,7 +572,7 @@ export default {
 
 - `created`阶段的 ajax 请求与`mounted`请求的区别：前者页面视图未出现，如果请求信息过多，页面会长时间处于白屏状态。
 - `mounted` 不会承诺所有的子组件也都一起被挂载。如果你希望等到整个视图都渲染完毕，可以用 `vm.$nextTick`。
-- vue2.0之后主动调用`$destroy()`不会移除dom节点，作者不推荐直接destroy这种做法，如果实在需要这样用可以在这个生命周期钩子中手动移除dom节点。[:squirrel:](#目录)
+- vue2.0之后主动调用`$destroy()`不会移除dom节点，作者不推荐直接destroy这种做法，如果实在需要这样用可以在这个生命周期钩子中手动移除dom节点。[:information_desk_person:](#目录)
 
 ## 简单的vue路由
 
@@ -631,3 +634,5 @@ new Vue({
   </div>
 </template>
 ```
+
+[:information_desk_person:](#目录)
