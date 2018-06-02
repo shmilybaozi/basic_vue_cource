@@ -4,7 +4,7 @@
   <div id="home">
     <!-- 在子组件对应的标签中 绑定$emit("传值名字","内容")为传值名字的属性 获取内容用$event -->
     <app-header :title="title" @titleChanged="updateTitle($event)"></app-header>
-    <!-- 父组件向子组件传值：在子组件的标签中绑定一个自定义属性,传入数据 -->
+    <!-- 父组件向子组件传递数据：在子组件的标签中绑定一个自定义属性,传入数据名字 -->
     <users :users="users"></users>
     <users :users="users"></users>
     <app-footer :title="title"></app-footer>
@@ -19,7 +19,7 @@ import Footer from './Footer'
 
 export default {
   name: 'Home',
-   // 局部注册组件
+  // 注册局部组件
   components: {
     Users,
     "app-header": Header,

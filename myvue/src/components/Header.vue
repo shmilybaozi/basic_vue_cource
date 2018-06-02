@@ -40,10 +40,10 @@ export default {
   //   alert("updated组件更新完毕,此方法执行后,页面显示");
   // },
   // beforeDestroy () {
-  //   lert("beforeDestroy组件销毁前");
+  //   alert("beforeDestroy组件销毁前");
   // },
   // destroyed () {
-  //   lert("destroyed组件销毁");
+  //   alert("destroyed组件销毁");
   // }
 }
 </script>

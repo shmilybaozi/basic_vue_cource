@@ -12,7 +12,7 @@
   </div>
 </template>
 
-/* 
+/*
 父组件传递数据给子组件：
 1.传值：string number boolean  --->在子组件中修改数据,仅当前组件发生修改
 2.传引用：array object    --->在子组件中修改数据,所有引用位置都改变
@@ -22,7 +22,7 @@
 <script>
 export default {
   name: 'users',
-  // 接受父组件的传值props:["自定义属性名"]
+  // 接受父组件传递的数据props:["自定义属性名"]
   props: ["users"],
   // props的标准写法：
   /*  props: {

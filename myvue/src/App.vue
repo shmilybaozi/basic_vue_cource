@@ -1,15 +1,16 @@
 <template>
   <div id="app">
     <ul>
-      <!-- 
-        <a>标签中href的内容必须和路由的path内容一致才能实现跳转
-        使用<a>标签每次都重新加载页面,不满足提高运行速度的需求
-          
-        使用路由router-link to="和路由的path内容一致"
-      -->
+      <!-- 使用 router-link 组件来导航. -->
+      <!-- 通过传入 `to` 属性指定链接. -->
+      <!-- <router-link> 默认会被渲染成一个 `<a>` 标签 -->
+      <!--使用路由router-link to="和路由的path内容一致"-->
       <li><router-link to="/">Home</router-link></li>
       <li><router-link to="helloworld">Hello</router-link></li>
     </ul>
+
+    <!-- 路由出口 -->
+    <!-- 路由匹配到的组件将渲染在这里 -->
     <router-view></router-view>
   </div>
 </template>
