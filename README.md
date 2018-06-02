@@ -39,7 +39,7 @@
 
 - [:speech_balloon: 简单的vue路由](#:speech_balloon:简单的vue路由)
 
-## 搭建一个vue项目
+## :tada: 搭建一个vue项目
 
 - 打开命令行工具---运行：
 
@@ -66,7 +66,7 @@ $ npm run dev
   - 是否安装测试单元“e2e tests”? no
   - 是否安装依赖? yes
 
-## 分析src文件夹的逻辑关系
+## :star2: 分析src文件夹的逻辑关系
 
 > index.html ---> main.js ---> App.vue ---> components
 
@@ -142,7 +142,7 @@ new Vue({
   </template>
   ```
 
-## 处理逻辑：`<script>`详解
+## :eyes: 处理逻辑：`<script>`详解
 
 ```javascript
 <script>
@@ -162,7 +162,7 @@ export default {
 </script>
 ```
 
-## 属性绑定和双向数据绑定
+## :relieved: 属性绑定和双向数据绑定
 
 - 属性绑定`v-bind`
 
@@ -182,7 +182,7 @@ export default {
 
   *`属性值`的名称和`data数据`中的名称保持一致*
 
-## 计算属性与侦听器
+## :relaxed: 计算属性与侦听器
 
 - 计算属性`computed: {},`
 
@@ -221,7 +221,7 @@ export default {
 
   当需要在数据变化时执行异步或开销较大的操作时，这个方式是最有用的。
 
-## v-if指令
+## :point_right: v-if指令
 
 - v-if
 
@@ -267,7 +267,7 @@ export default {
 
   `v-else-if` 也必须紧跟在带 `v-if` 或者 `v-else-if` 的元素之后。
 
-## v-show指令
+## :point_right: v-show指令
 
 ```html
 <h1 v-show="ok">Hello!</h1>
@@ -278,7 +278,7 @@ export default {
 
 *注意，`v-show`不支持 `<template>` 元素，也不支持 `v-else`。*
 
-## v-for指令
+## :point_right: v-for指令
 
 - 遍历数组
 
@@ -350,7 +350,7 @@ export default {
 
   **如果在组件中使用 `v-for` 时，`key` 是必须的**
 
-## v-on
+## :fire: v-on
 
 可以用 `v-on` 指令监听 DOM 事件，并在触发时运行一些 JavaScript 代码。
 
@@ -470,7 +470,7 @@ export default {
   - `.right`
   - `.middle`
 
-## 父组件向子组件传递数据
+## :two_hearts: 父组件向子组件传递数据
 
 在子组件的标签中绑定一个自定义属性，传入数据名字：
 
@@ -507,7 +507,7 @@ export default {
 
 根据需求来定传值还是传引用
 
-## 子组件向父组件传递数据
+## :revolving_hearts: 子组件向父组件传递数据
 
 ```javascript
 <script>
@@ -543,7 +543,7 @@ export default {
 </script>
 ```
 
-## 生命周期钩子函数
+## :exclamation: 生命周期钩子函数
 
 ![生命周期钩子函数](./myvue/src/assets/vue_生命周期函数.jpg)
 
@@ -564,7 +564,7 @@ export default {
 - `mounted` 不会承诺所有的子组件也都一起被挂载。如果你希望等到整个视图都渲染完毕，可以用 `vm.$nextTick`
 - vue2.0之后主动调用`$destroy()`不会移除dom节点，作者不推荐直接destroy这种做法，如果实在需要这样用可以在这个生命周期钩子中手动移除dom节点
 
-## 简单的vue路由
+## :speech_balloon: 简单的vue路由
 
 可以在项目开始搭建的时候选择使用路由，也可以自己加载路由
 
