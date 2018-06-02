@@ -2,42 +2,42 @@
 # vue基础教程
 
 ## 目录
-- [:tada: 搭建一个vue项目](#:tada:搭建一个vue项目)
+- [:tada: 搭建一个vue项目](#tada-搭建一个vue项目)
 
-- [:star2: 分析src文件夹的逻辑关系](#:star2:分析src文件夹的逻辑关系)
+- [:star2: 分析src文件夹的逻辑关系](#star2-分析src文件夹的逻辑关系)
 
   - index.html
   - vue入口文件 main.js
   - 父组件 App.vue
   - 子组件 components文件夹
 
-- [:eyes: 处理逻辑：`<script>`详解](#:eyes:处理逻辑：`<script>`详解)
+- [:eyes: 处理逻辑：`<script>`详解](#eyes-处理逻辑：`<script>`详解)
 
-- [:relieved: 属性绑定和双向数据绑定](#:relieved:属性绑定和双向数据绑定)
+- [:relieved: 属性绑定和双向数据绑定](#relieved-属性绑定和双向数据绑定)
 
   - 属性绑定`v-bind`
   - 双向绑定`v-model`
 
-- [:relaxed: 计算属性与侦听器](#:relaxed:计算属性与侦听器)
+- [:relaxed: 计算属性与侦听器](#relaxed-计算属性与侦听器)
 
   - 计算属性`computed: {},`
   - 侦听器`watch: {},`
 
-- [:point_right: v-if指令](#:point_right:v-if指令)
+- [:point_right: v-if指令](#point_right-v-if指令)
 
-- [:point_right: v-show指令](#:point_right:v-show指令)
+- [:point_right: v-show指令](#point_right-v-show指令)
 
-- [:point_right: v-for指令](#:point_right:v-for指令)
+- [:point_right: v-for指令](#point_right-v-for指令)
 
-- [:fire: v-on](#:fire:v-on)
+- [:fire: v-on](#fire-v-on)
 
-- [:two_hearts: 父组件向子组件传递数据](#:two_hearts:父组件向子组件传递数据)
+- [:two_hearts: 父组件向子组件传递数据](#two_hearts-父组件向子组件传递数据)
 
-- [:revolving_hearts: 子组件向父组件传递数据](#:revolving_hearts:子组件向父组件传递数据)
+- [:revolving_hearts: 子组件向父组件传递数据](#revolving_hearts-子组件向父组件传递数据)
 
-- [:exclamation: 生命周期钩子函数](#:exclamation:生命周期钩子函数)
+- [:exclamation: 生命周期钩子函数](#exclamation-生命周期钩子函数)
 
-- [:speech_balloon: 简单的vue路由](#:speech_balloon:简单的vue路由)
+- [:speech_balloon: 简单的vue路由](#speech_balloon-简单的vue路由)
 
 ## :tada: 搭建一个vue项目
 
