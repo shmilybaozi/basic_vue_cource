@@ -2,44 +2,44 @@
 # vue基础教程
 
 ## 目录
-- [:tada: 搭建一个vue项目](##:tada:搭建一个vue项目)
+- [:tada:搭建一个vue项目](##搭建一个vue项目)
 
-- [:star2: 分析src文件夹的逻辑关系](##:star2:分析src文件夹的逻辑关系)
+- [:star:分析src文件夹的逻辑关系](##分析src文件夹的逻辑关系)
 
   - index.html
   - vue入口文件 main.js
   - 父组件 App.vue
   - 子组件 components文件夹
 
-- [:eyes: 处理逻辑：`<script>`详解](##:eyes:处理逻辑：`<script>`详解)
+- [:eyes: 处理逻辑：`<script>`详解](##处理逻辑：`<script>`详解)
 
-- [:relieved: 属性绑定和双向数据绑定](##:relieved:属性绑定和双向数据绑定)
+- [:relieved: 属性绑定和双向数据绑定](##属性绑定和双向数据绑定)
 
   - 属性绑定`v-bind`
   - 双向绑定`v-model`
 
-- [:relaxed: 计算属性与侦听器](##:relaxed:计算属性与侦听器)
+- [:relaxed: 计算属性与侦听器](##计算属性与侦听器)
 
   - 计算属性`computed: {},`
   - 侦听器`watch: {},`
 
-- [:point_right: v-if指令](##:point_right:v-if指令)
+- [:point_right: v-if指令](##v-if指令)
 
-- [:point_right: v-show指令](##:point_right:v-show指令)
+- [:point_right: v-show指令](##v-show指令)
 
-- [:point_right: v-for指令](##:point_right:v-for指令)
+- [:point_right: v-for指令](##v-for指令)
 
-- [:fire: v-on](##:fire:v-on)
+- [:fire: v-on](##v-on)
 
-- [:two_hearts: 父组件向子组件传递数据](##:two_hearts:父组件向子组件传递数据)
+- [:two_hearts: 父组件向子组件传递数据](##父组件向子组件传递数据)
 
-- [:revolving_hearts: 子组件向父组件传递数据](##:revolving_hearts:子组件向父组件传递数据)
+- [:revolving_hearts: 子组件向父组件传递数据](##子组件向父组件传递数据)
 
-- [:exclamation: 生命周期钩子函数](##:exclamation:生命周期钩子函数)
+- [:exclamation: 生命周期钩子函数](##生命周期钩子函数)
 
-- [:speech_balloon: 简单的vue路由](##:speech_balloon:简单的vue路由)
+- [:speech_balloon: 简单的vue路由](##简单的vue路由)
 
-## :tada: 搭建一个vue项目
+## 搭建一个vue项目
 
 - 打开命令行工具---运行：
 
@@ -66,7 +66,7 @@ $ npm run dev
   - 是否安装测试单元“e2e tests”? no
   - 是否安装依赖? yes
 
-## :star2: 分析src文件夹的逻辑关系
+## 分析src文件夹的逻辑关系
 
 > index.html ---> main.js ---> App.vue ---> components
 
@@ -142,7 +142,7 @@ new Vue({
   </template>
   ```
 
-## :eyes: 处理逻辑：`<script>`详解
+## 处理逻辑：`<script>`详解
 
 ```javascript
 <script>
@@ -162,7 +162,7 @@ export default {
 </script>
 ```
 
-## :relieved: 属性绑定和双向数据绑定
+## 属性绑定和双向数据绑定
 
 - 属性绑定`v-bind`
 
@@ -182,7 +182,7 @@ export default {
 
   *`属性值`的名称和`data数据`中的名称保持一致*
 
-## :relaxed: 计算属性与侦听器
+## 计算属性与侦听器
 
 - 计算属性`computed: {},`
 
@@ -221,7 +221,7 @@ export default {
 
   当需要在数据变化时执行异步或开销较大的操作时，这个方式是最有用的。
 
-## :point_right: v-if指令
+## v-if指令
 
 - v-if
 
@@ -267,7 +267,7 @@ export default {
 
   `v-else-if` 也必须紧跟在带 `v-if` 或者 `v-else-if` 的元素之后。
 
-## :point_right: v-show指令
+## v-show指令
 
 ```html
 <h1 v-show="ok">Hello!</h1>
@@ -278,7 +278,7 @@ export default {
 
 *注意，`v-show`不支持 `<template>` 元素，也不支持 `v-else`。*
 
-## :point_right: v-for指令
+## v-for指令
 
 - 遍历数组
 
@@ -350,7 +350,7 @@ export default {
 
   **如果在组件中使用 `v-for` 时，`key` 是必须的**
 
-## :fire: v-on
+## v-on
 
 可以用 `v-on` 指令监听 DOM 事件，并在触发时运行一些 JavaScript 代码。
 
@@ -470,7 +470,7 @@ export default {
   - `.right`
   - `.middle`
 
-## :two_hearts: 父组件向子组件传递数据
+## 父组件向子组件传递数据
 
 在子组件的标签中绑定一个自定义属性，传入数据名字：
 
@@ -507,7 +507,7 @@ export default {
 
 根据需求来定传值还是传引用
 
-## :revolving_hearts: 子组件向父组件传递数据
+## 子组件向父组件传递数据
 
 ```javascript
 <script>
@@ -543,7 +543,7 @@ export default {
 </script>
 ```
 
-## :exclamation: 生命周期钩子函数
+## 生命周期钩子函数
 
 ![生命周期钩子函数](./myvue/src/assets/vue_生命周期函数.jpg)
 
@@ -551,12 +551,12 @@ export default {
 | --- | --- | --- |
 | beforeCreate | 实例初始化之后，this指向创建的实例，不能访问到data、computed、watch、methods上的方法和数据 | 常用于初始化非响应式变量 |
 | created | 实例创建完成，可访问data、computed、watch、methods上的方法和数据，未挂载到DOM，不能访问到$el属性，$ref属性内容为空数组|常用于简单的ajax请求，页面的初始化 |
-| beforeMount | 在挂载开始之前被调用，beforeMount之前，会找到对应的template，并编译成render函数 | :-: |
+| beforeMount | 在挂载开始之前被调用，beforeMount之前，会找到对应的template，并编译成render函数 ||
 | mounted | 实例挂载到DOM上，此时可以通过DOM API获取到 DOM 节点，$ref属性可以访问 | 常用于获取VNode信息和操作，ajax请求 |
 | beforeUpdate | 响应式数据更新时调用，发生在虚拟DOM打补丁之前|适合在更新之前访问现有的DOM，比如手动移除已添加的事件监听器 |
 |updated | 虚拟 DOM 重新渲染和打补丁之后调用，组件DOM已经更新，可执行依赖于DOM的操作 | 避免在这个钩子函数中操作数据，可能陷入死循环 |
 | beforeDestroy | 实例销毁之前调用。这一步，实例仍然完全可用，this仍能获取到实例 | 常用于销毁定时器、解绑全局事件、销毁插件对象等操作 |
-| destroyed | 实例销毁后调用，调用后，Vue 实例指示的所有东西都会解绑定，所有的事件监听器会被移除，所有的子实例也会被销毁 | :-: |
+| destroyed | 实例销毁后调用，调用后，Vue 实例指示的所有东西都会解绑定，所有的事件监听器会被移除，所有的子实例也会被销毁 ||
 
 注意：
 
@@ -564,7 +564,7 @@ export default {
 - `mounted` 不会承诺所有的子组件也都一起被挂载。如果你希望等到整个视图都渲染完毕，可以用 `vm.$nextTick`
 - vue2.0之后主动调用`$destroy()`不会移除dom节点，作者不推荐直接destroy这种做法，如果实在需要这样用可以在这个生命周期钩子中手动移除dom节点
 
-## :speech_balloon: 简单的vue路由
+## 简单的vue路由
 
 可以在项目开始搭建的时候选择使用路由，也可以自己加载路由
 
