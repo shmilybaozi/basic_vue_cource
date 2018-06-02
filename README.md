@@ -64,7 +64,7 @@ $ npm run dev
   - 是否使用ESLint语法校检? no
   - 是否安装测试单元“unit tests”? no
   - 是否安装测试单元“e2e tests”? no
-  - 是否安装依赖? yes
+  - 是否安装依赖? yes [回到目录](#目录)
 
 ## 分析src文件夹的逻辑关系
 
