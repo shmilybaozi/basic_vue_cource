@@ -548,7 +548,7 @@ export default {
 ![生命周期钩子函数](./myvue/src/assets/vue_生命周期函数.jpg)
 
 | 生命周期钩子 | 组件状态 | 最佳实践 |
-| --- | --- | --- | --- |
+| --- | --- | --- |
 | beforeCreate | 实例初始化之后，this指向创建的实例，不能访问到data、computed、watch、methods上的方法和数据 | 常用于初始化非响应式变量 |
 | created | 实例创建完成，可访问data、computed、watch、methods上的方法和数据，未挂载到DOM，不能访问到$el属性，$ref属性内容为空数组|常用于简单的ajax请求，页面的初始化 |
 | beforeMount | 在挂载开始之前被调用，beforeMount之前，会找到对应的template，并编译成render函数 | :-: |
